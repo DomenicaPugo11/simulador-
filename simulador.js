@@ -12,4 +12,8 @@ function calcular(){
     let valorDisponible=calcularDisponible(ingresos,egresos);
     let spValorDisponible=document.getElementById("spnDisponible");
     spValorDisponible.textContent=valorDisponible;
+
+    let capacidadPago=calcularCapacidadPago(valorDisponible);
+    let spCapacidadPago=document.getElementById("spnCapacidadPago");
+    spCapacidadPago.textContent=capacidadPago;
 }

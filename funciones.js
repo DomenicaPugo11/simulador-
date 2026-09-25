@@ -8,3 +8,8 @@
         return valorDisponible;
     }
  }
+
+ function calcularCapacidadPago(montoDisponible){
+    let capacidadPago=(montoDisponible*50)/100;
+    return capacidadPago;
+ }
