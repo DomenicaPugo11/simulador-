@@ -1,0 +1,1 @@
+Actúa como un diseñador web,  mejora la parte estética de esta pagina web de acuerdo a su tema pero sin cambiar ni modificar los IDs , además mantén  separado el HTML y el CSS . También has que esta pagina sea responsive ( pero no uses librerías externas). En la parte estética escoje colores y letras que combinen y tengan una estructura.

@@ -1,70 +1,330 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    margin: 0;
-    padding: 0;
-}
+/* ==============================
+   ESTILO GENERAL
+   ============================== */
 
-.container {
-    width: 400px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h2 {
-    margin-top: 20px;
-    font-size: 18px;
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+* {
     box-sizing: border-box;
 }
 
-p {
-    margin-top: 10px;
+body {
+    margin: 0;
+    padding: 30px 15px;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #e8f3f1,
+        #f7faf9
+    );
+
+    color: #26383d;
 }
+
+
+/* ==============================
+   CONTENEDOR
+   ============================== */
+
+.container {
+    width: 100%;
+    max-width: 620px;
+
+    margin: 20px auto;
+    padding: 35px;
+
+    background-color: white;
+
+    border-radius: 18px;
+
+    border: 1px solid #d8e6e4;
+
+    box-shadow:
+        0 10px 30px rgba(30, 80, 75, 0.12);
+}
+
+
+/* ==============================
+   TITULO PRINCIPAL
+   ============================== */
+
+h1 {
+    margin: 0 0 30px;
+
+    text-align: center;
+
+    color: #176b65;
+
+    font-size: 32px;
+}
+
+
+/* ==============================
+   TITULOS DE SECCION
+   ============================== */
+
+h2 {
+    margin-top: 28px;
+    margin-bottom: 18px;
+
+    padding-bottom: 8px;
+
+    color: #245b58;
+
+    font-size: 20px;
+
+    border-bottom: 2px solid #dceae8;
+}
+
+
+/* ==============================
+   ETIQUETAS
+   ============================== */
+
+label {
+    display: block;
+
+    margin-top: 15px;
+    margin-bottom: 7px;
+
+    color: #40545a;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+/* ==============================
+   INPUTS
+   ============================== */
+
+input {
+    display: block;
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #cbd9d8;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background-color: #f9fbfb;
+
+    color: #26383d;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+
+/* Cuando se selecciona el input */
+
+input:focus {
+    border-color: #2a8c84;
+
+    background-color: white;
+
+    box-shadow:
+        0 0 0 3px rgba(42, 140, 132, 0.12);
+}
+
+
+/* ==============================
+   RESULTADOS
+   ============================== */
+
+p {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin: 12px 0;
+
+    padding: 12px 14px;
+
+    border-radius: 9px;
+
+    background-color: #f1f7f6;
+
+    color: #526267;
+
+    font-size: 15px;
+}
+
+
+/* Valores de los resultados */
 
 span {
     font-weight: bold;
-    color: #2c3e50;
+
+    color: #176b65;
+
+    text-align: right;
 }
+
+
+/* ==============================
+   BOTONES
+   ============================== */
 
 .buttons {
-    margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-top: 30px;
 }
+
 
 button {
-    width: 48%;
-    padding: 10px;
+    flex: 1;
+
+    padding: 13px 15px;
+
     border: none;
-    border-radius: 5px;
-    background-color: #3498db;
+
+    border-radius: 9px;
+
+    background-color: #176b65;
+
     color: white;
+
+    font-size: 15px;
+
     font-weight: bold;
+
     cursor: pointer;
+
+    transition: 0.2s;
 }
 
+
+/* Efecto al pasar el mouse */
+
 button:hover {
-    background-color: #2980b9;
+    background-color: #12544f;
+
+    transform: translateY(-1px);
+}
+
+
+/* Botón reiniciar */
+
+#btnReiniciar {
+    background-color: #dce9e8;
+
+    color: #235b59;
+}
+
+
+#btnReiniciar:hover {
+    background-color: #cbdedc;
+}
+
+
+/* ==============================
+   TABLET
+   ============================== */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .container {
+        margin: 10px auto;
+
+        padding: 28px 24px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+
+
+/* ==============================
+   CELULAR
+   ============================== */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        margin: 5px auto;
+
+        padding: 22px 17px;
+
+        border-radius: 14px;
+    }
+
+
+    h1 {
+        margin-bottom: 24px;
+
+        font-size: 25px;
+    }
+
+
+    h2 {
+        margin-top: 23px;
+
+        font-size: 18px;
+    }
+
+
+    label {
+        font-size: 14px;
+    }
+
+
+    input {
+        padding: 11px 12px;
+
+        font-size: 15px;
+    }
+
+
+    /* Los resultados se acomodan verticalmente */
+
+    p {
+        flex-direction: column;
+
+        gap: 5px;
+
+        align-items: flex-start;
+
+        font-size: 14px;
+    }
+
+
+    span {
+        text-align: left;
+    }
+
+
+    /* Los botones quedan uno debajo del otro */
+
+    .buttons {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    button {
+        width: 100%;
+    }
 }
