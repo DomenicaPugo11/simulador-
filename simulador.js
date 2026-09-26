@@ -38,4 +38,13 @@ function calcular(){
     let cuotaMensual=calcularCuotaMensual(totalPagar,plazoAnios);
     let spCuotaMensual=document.getElementById("spnCuotaMensual");
     spCuotaMensual.textContent=cuotaMensual;
+
+    let analizarcredito=aprobarCredito(capacidadPago,cuotaMensual);
+    if (analizarcredito==true){
+        let spAprobarCredito=document.getElementById("spnEstadoCredito");
+        spAprobarCredito.textContent="CREDITO APROBADO";
+    }else {
+        let spAprobarCredito=document.getElementById("spnEstadoCredito");
+        spAprobarCredito.textContent="CREDITO RECHAZADO";
+    }
 }

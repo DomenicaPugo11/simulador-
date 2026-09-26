@@ -32,3 +32,12 @@
     cuotaMensual=total/cuotaMensual;
     return cuotaMensual;
  }
+
+ function aprobarCredito(capacidadPago,cuotaMensual){
+    if (capacidadPago>cuotaMensual){
+        return true;
+    }else {
+        return false;
+    }
+
+ }
