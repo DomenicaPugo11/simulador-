@@ -1,6 +1,7 @@
-/* ==============================
+/* =========================================
+   SIMULADOR DE CRÉDITO
    ESTILO GENERAL
-   ============================== */
+   ========================================= */
 
 * {
     box-sizing: border-box;
@@ -8,87 +9,134 @@
 
 body {
     margin: 0;
-    padding: 30px 15px;
+    padding: 40px 20px;
+
     min-height: 100vh;
 
     font-family: Arial, sans-serif;
 
-    background: linear-gradient(
-        135deg,
-        #e8f3f1,
-        #f7faf9
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #e8f4f2,
+            #f5f8f7
+        );
 
-    color: #26383d;
+    color: #263b40;
 }
 
 
-/* ==============================
-   CONTENEDOR
-   ============================== */
+/* =========================================
+   CONTENEDOR PRINCIPAL
+   ========================================= */
 
 .container {
     width: 100%;
-    max-width: 620px;
+    max-width: 680px;
 
-    margin: 20px auto;
-    padding: 35px;
+    margin: 0 auto;
+    padding: 38px 42px;
 
-    background-color: white;
+    background-color: #ffffff;
 
-    border-radius: 18px;
+    border-radius: 20px;
 
-    border: 1px solid #d8e6e4;
+    border: 1px solid #d9e7e5;
 
     box-shadow:
-        0 10px 30px rgba(30, 80, 75, 0.12);
+        0 15px 40px rgba(23, 76, 72, 0.12);
 }
 
 
-/* ==============================
+/* =========================================
    TITULO PRINCIPAL
-   ============================== */
+   ========================================= */
 
 h1 {
-    margin: 0 0 30px;
+    position: relative;
+
+    margin: 0 0 35px;
+
+    padding-right: 80px;
 
     text-align: center;
 
-    color: #176b65;
+    color: #126b67;
 
-    font-size: 32px;
+    font-size: 34px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
 }
 
 
-/* ==============================
-   TITULOS DE SECCION
-   ============================== */
+/* Logo */
+
+h1 img {
+    position: absolute;
+
+    right: 0;
+    top: 50%;
+
+    width: 65px;
+    height: 65px;
+
+    object-fit: contain;
+
+    transform: translateY(-50%);
+}
+
+
+/* =========================================
+   TITULOS DE LAS SECCIONES
+   ========================================= */
 
 h2 {
-    margin-top: 28px;
-    margin-bottom: 18px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 
-    padding-bottom: 8px;
+    padding-bottom: 10px;
 
-    color: #245b58;
+    color: #17645f;
 
-    font-size: 20px;
+    font-size: 21px;
 
-    border-bottom: 2px solid #dceae8;
+    border-bottom: 2px solid #d8e8e5;
+
+    position: relative;
 }
 
 
-/* ==============================
+/* Pequeño detalle decorativo */
+
+h2::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    margin-top: 8px;
+
+    background-color: #2b9a91;
+
+    border-radius: 5px;
+}
+
+
+/* =========================================
    ETIQUETAS
-   ============================== */
+   ========================================= */
 
 label {
     display: block;
 
-    margin-top: 15px;
-    margin-bottom: 7px;
+    margin-top: 17px;
+    margin-bottom: 8px;
 
-    color: #40545a;
+    color: #40565b;
 
     font-size: 15px;
 
@@ -96,104 +144,138 @@ label {
 }
 
 
-/* ==============================
-   INPUTS
-   ============================== */
+/* =========================================
+   CAMPOS DE TEXTO
+   ========================================= */
 
 input {
     display: block;
 
     width: 100%;
 
-    padding: 12px 14px;
+    height: 48px;
 
-    border: 1px solid #cbd9d8;
+    padding: 0 14px;
 
-    border-radius: 9px;
+    margin: 0;
+
+    border: 1px solid #cbdad8;
+
+    border-radius: 10px;
 
     outline: none;
 
-    background-color: #f9fbfb;
+    background-color: #f8faf9;
 
-    color: #26383d;
+    color: #263b40;
 
     font-size: 16px;
 
-    transition: 0.2s;
+    transition: all 0.2s ease;
 }
 
 
-/* Cuando se selecciona el input */
+/* Cuando el usuario selecciona un campo */
 
 input:focus {
-    border-color: #2a8c84;
+    background-color: #ffffff;
 
-    background-color: white;
+    border-color: #26958d;
 
     box-shadow:
-        0 0 0 3px rgba(42, 140, 132, 0.12);
+        0 0 0 3px rgba(38, 149, 141, 0.13);
 }
 
 
-/* ==============================
+/* =========================================
    RESULTADOS
-   ============================== */
+   ========================================= */
 
 p {
     display: flex;
 
     justify-content: space-between;
 
-    gap: 15px;
+    align-items: center;
+
+    gap: 20px;
+
+    min-height: 48px;
 
     margin: 12px 0;
 
-    padding: 12px 14px;
+    padding: 12px 16px;
 
-    border-radius: 9px;
+    border-radius: 10px;
 
     background-color: #f1f7f6;
 
-    color: #526267;
+    border: 1px solid #e0ecea;
+
+    color: #52666b;
 
     font-size: 15px;
 }
 
 
-/* Valores de los resultados */
+/* Valores calculados */
 
 span {
     font-weight: bold;
 
-    color: #176b65;
+    color: #126b67;
 
     text-align: right;
 }
 
 
-/* ==============================
+/* =========================================
+   ESTADO DEL CRÉDITO
+   ========================================= */
+
+/*
+   Se mantiene el mismo id que ya tienes.
+   Solo se le da más importancia visual.
+*/
+
+#spnEstadoCredito {
+    padding: 5px 10px;
+
+    border-radius: 6px;
+
+    background-color: #e2f2ef;
+
+    color: #176b67;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
    BOTONES
-   ============================== */
+   ========================================= */
 
 .buttons {
     display: flex;
 
-    gap: 12px;
+    gap: 14px;
 
-    margin-top: 30px;
+    margin-top: 32px;
 }
 
 
 button {
     flex: 1;
 
-    padding: 13px 15px;
+    min-height: 48px;
+
+    padding: 12px 18px;
 
     border: none;
 
-    border-radius: 9px;
+    border-radius: 10px;
 
-    background-color: #176b65;
+    background-color: #176b67;
 
     color: white;
 
@@ -203,83 +285,109 @@ button {
 
     cursor: pointer;
 
-    transition: 0.2s;
+    transition: all 0.2s ease;
 }
 
 
-/* Efecto al pasar el mouse */
+/* Botón principal */
 
-button:hover {
-    background-color: #12544f;
+#btnCalcularCredito {
+    background-color: #176b67;
+}
 
-    transform: translateY(-1px);
+
+#btnCalcularCredito:hover {
+    background-color: #105550;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(23, 107, 103, 0.20);
 }
 
 
 /* Botón reiniciar */
 
 #btnReiniciar {
-    background-color: #dce9e8;
+    background-color: #e3eeec;
 
-    color: #235b59;
+    color: #24635f;
 }
 
 
 #btnReiniciar:hover {
-    background-color: #cbdedc;
+    background-color: #d4e4e1;
+
+    transform: translateY(-2px);
 }
 
 
-/* ==============================
+/* =========================================
+   EFECTO AL PRESIONAR BOTONES
+   ========================================= */
+
+button:active {
+    transform: translateY(0);
+}
+
+/* =========================================
    TABLET
-   ============================== */
+   ========================================= */
 
 @media (max-width: 700px) {
 
     body {
-        padding: 20px 12px;
+        padding: 25px 15px;
     }
 
     .container {
-        margin: 10px auto;
-
-        padding: 28px 24px;
+        max-width: 600px;
+        padding: 30px;
     }
 
     h1 {
-        font-size: 28px;
+        padding-right: 65px;
+        font-size: 30px;
+    }
+
+    h1 img {
+        width: 50px;
+        height: 50px;
     }
 }
 
 
-/* ==============================
-   CELULAR
-   ============================== */
+/* =========================================
+   CELULARES
+   ========================================= */
 
 @media (max-width: 480px) {
 
     body {
-        padding: 10px;
+        padding: 12px 10px;
     }
 
+
     .container {
-        margin: 5px auto;
+        width: 100%;
 
-        padding: 22px 17px;
+        margin: 0;
 
-        border-radius: 14px;
+        padding: 25px 18px;
+
+        border-radius: 15px;
     }
 
 
     h1 {
-        margin-bottom: 24px;
+        margin-bottom: 28px;
 
         font-size: 25px;
     }
 
 
     h2 {
-        margin-top: 23px;
+        margin-top: 25px;
 
         font-size: 18px;
     }
@@ -291,20 +399,20 @@ button:hover {
 
 
     input {
-        padding: 11px 12px;
+        height: 46px;
 
         font-size: 15px;
     }
 
 
-    /* Los resultados se acomodan verticalmente */
+    /* Resultados en columna */
 
     p {
         flex-direction: column;
 
-        gap: 5px;
-
         align-items: flex-start;
+
+        gap: 5px;
 
         font-size: 14px;
     }
@@ -315,16 +423,21 @@ button:hover {
     }
 
 
-    /* Los botones quedan uno debajo del otro */
+    /* Botones uno debajo del otro */
 
     .buttons {
         flex-direction: column;
 
         gap: 10px;
+
+        margin-top: 25px;
     }
 
 
     button {
         width: 100%;
+
+        min-height: 46px;
     }
+
 }
