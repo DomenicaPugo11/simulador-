@@ -30,4 +30,12 @@ function calcular(){
     let interesSimple=calcularInteresSimple(monto,tasa,plazoAnios);
     let spInteresValor=document.getElementById("spnInteresPagar");
     spInteresValor.textContent=interesSimple;
+
+    let totalPagar=calcularTotalPagar(monto,interesSimple);
+    let spTotalPagar=document.getElementById("spnTotalPrestamo");
+    spTotalPagar.textContent=totalPagar;
+
+    let cuotaMensual=calcularCuotaMensual(totalPagar,plazoAnios);
+    let spCuotaMensual=document.getElementById("spnCuotaMensual");
+    spCuotaMensual.textContent=cuotaMensual;
 }
