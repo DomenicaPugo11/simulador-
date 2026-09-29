@@ -441,3 +441,22 @@ button:active {
     }
 
 }
+
+/* =========================================
+   MENSAJES DE VALIDACION
+   ========================================= */
+
+.mensaje-error {
+    display: block;
+
+    margin-top: 5px;
+    margin-bottom: 8px;
+
+    color: red;
+
+    font-size: 14px;
+
+    font-style: italic;
+
+    font-weight: normal;
+}

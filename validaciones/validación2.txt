@@ -1,0 +1,3 @@
+En simulador.js lo que tu me estas dando esta una parte del código como cortada por que solo están símbolos raros, podrías arreglarlo y darme solo el fragmento que tengo que cambiar no todo el código 
+
+Dato: no ha estado mal esa parte del código a sido así ese fragmento así que no lo cambie
