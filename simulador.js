@@ -77,11 +77,11 @@ function calcular(){
 
     let valorDisponible=calcularDisponible(ingresos,egresos);
     let spValorDisponible=document.getElementById("spnDisponible");
-    spValorDisponible.textContent=valorDisponible;
+    spValorDisponible.textContent=valorDisponible.toFixed(2);
 
     let capacidadPago=calcularCapacidadPago(valorDisponible);
     let spCapacidadPago=document.getElementById("spnCapacidadPago");
-    spCapacidadPago.textContent=capacidadPago;
+    spCapacidadPago.textContent=capacidadPago.toFixed(2);
 
     let ctxMonto=document.getElementById("txtMonto");
     let montoStr=ctxMonto.value;
@@ -95,15 +95,15 @@ function calcular(){
 
     let interesSimple=calcularInteresSimple(monto,tasa,plazoAnios);
     let spInteresValor=document.getElementById("spnInteresPagar");
-    spInteresValor.textContent=interesSimple;
+    spInteresValor.textContent=interesSimple.toFixed(2);
 
     let totalPagar=calcularTotalPagar(monto,interesSimple);
     let spTotalPagar=document.getElementById("spnTotalPrestamo");
-    spTotalPagar.textContent=totalPagar;
+    spTotalPagar.textContent=totalPagar.toFixed(2);
 
     let cuotaMensual=calcularCuotaMensual(totalPagar,plazoAnios);
     let spCuotaMensual=document.getElementById("spnCuotaMensual");
-    spCuotaMensual.textContent=cuotaMensual;
+    spCuotaMensual.textContent=cuotaMensual.toFixed(2);
 
     let analizarcredito=aprobarCredito(capacidadPago,cuotaMensual);
     if (analizarcredito==true){
