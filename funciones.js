@@ -10,7 +10,7 @@
  }
 
  function calcularCapacidadPago(montoDisponible){
-    let capacidadPago=(montoDisponible*50)/100;
+    let capacidadPago=(montoDisponible*30)/100;
     return capacidadPago;
  }
 
